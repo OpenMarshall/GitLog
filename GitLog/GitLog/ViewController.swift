@@ -41,12 +41,8 @@ class ViewController: NSViewController {
     }
     
     @IBAction func generate(_ sender: Any) {
-        let output = cd(projDirField.stringValue).bash(command: "git",
-                                                    arguments: ["log",
-                                                                "--since='7 days ago'",
-                                                                "--oneline",
-                                                                "--author=\(authorNameField.stringValue)",
-                                                                "--pretty=format:* %s"])
+        let command = "git•log•--since='7 days ago'•--oneline•--author=\(authorNameField.stringValue)•--pretty=format:* %s"
+        let output = cd(projDirField.stringValue).bash(command)
         consoleTextView.string = output
     }
     

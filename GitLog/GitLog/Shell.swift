@@ -37,6 +37,14 @@ struct Shell {
         return shell(launchPath: whichPathForCommand,
                      arguments: arguments)
     }
+    
+    func bash(_ commandWithArguments: String) -> String {
+        var commandAndArguments = commandWithArguments.components(separatedBy: "•")
+        guard commandAndArguments.count > 0 else {
+            return ""
+        }
+        return bash(command: commandAndArguments.removeFirst(), arguments: commandAndArguments)
+    }
 }
 
 
