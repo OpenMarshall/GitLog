@@ -26,33 +26,6 @@ class ViewController: NSViewController {
     }
     
     
-    // MARK: - Shell
-    func shell(launchPath: String, arguments: [String]) -> String
-    {
-        let task = Process()
-        task.launchPath = launchPath
-        task.arguments = arguments
-        task.currentDirectoryPath = projDirField.stringValue
-        
-        let pipe = Pipe()
-        task.standardOutput = pipe
-        task.launch()
-        
-        let data = pipe.fileHandleForReading.readDataToEndOfFile()
-        let output = String(data: data, encoding: String.Encoding.utf8)!
-        if output.characters.count > 0 {
-            //remove newline character.
-            let lastIndex = output.index(before: output.endIndex)
-            return output[output.startIndex ..< lastIndex]
-        }
-        return output
-    }
-    
-    func bash(command: String, arguments: [String]) -> String {
-        let whichPathForCommand = shell(launchPath: "/bin/bash", arguments: [ "-l", "-c", "which \(command)" ])
-        return shell(launchPath: whichPathForCommand, arguments: arguments)
-    }
-    
     // MARK: - IBAction
     @IBAction func browseDir(_ sender: Any) {
         let openPanel = NSOpenPanel()
@@ -69,12 +42,10 @@ class ViewController: NSViewController {
     
     
     @IBAction func generate(_ sender: Any) {
-        guard projDirField.stringValue.characters.count != 0 else {
-            return
-        }
-        let log = bash(command: "git", arguments: ["log","--since","'5 days ago'","--oneline",
-                                                   "--author",authorNameField.stringValue])
-        print(log)
+        let log = cd(projDirField.stringValue)
+            .bash(command: "git",
+                  arguments: ["log","--since","'5 days ago'","--oneline","--author",authorNameField.stringValue])
+        consoleTextView.string = log
     }
 }
 

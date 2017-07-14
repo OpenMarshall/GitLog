@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F2BE6341F190BCF006BEAF6 /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2BE6331F190BCF006BEAF6 /* Shell.swift */; };
 		5FADB1661F18C56E0043E20C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FADB1651F18C56E0043E20C /* AppDelegate.swift */; };
 		5FADB1681F18C56E0043E20C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FADB1671F18C56E0043E20C /* ViewController.swift */; };
 		5FADB16A1F18C56E0043E20C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FADB1691F18C56E0043E20C /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F2BE6331F190BCF006BEAF6 /* Shell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = "<group>"; };
 		5FADB1621F18C56E0043E20C /* GitLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FADB1651F18C56E0043E20C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FADB1671F18C56E0043E20C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			children = (
 				5FADB1651F18C56E0043E20C /* AppDelegate.swift */,
 				5FADB1671F18C56E0043E20C /* ViewController.swift */,
+				5F2BE6331F190BCF006BEAF6 /* Shell.swift */,
 				5FADB1691F18C56E0043E20C /* Assets.xcassets */,
 				5FADB16B1F18C56E0043E20C /* Main.storyboard */,
 				5FADB16E1F18C56E0043E20C /* Info.plist */,
@@ -133,6 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F2BE6341F190BCF006BEAF6 /* Shell.swift in Sources */,
 				5FADB1681F18C56E0043E20C /* ViewController.swift in Sources */,
 				5FADB1661F18C56E0043E20C /* AppDelegate.swift in Sources */,
 			);
