@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -658,7 +659,7 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="GitLog" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="42" y="0.0"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
@@ -689,10 +690,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PD9-4W-O02">
-                                <rect key="frame" x="605" y="222" width="72" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="JpB-8D-fYD"/>
-                                </constraints>
+                                <rect key="frame" x="592" y="222" width="85" height="32"/>
                                 <buttonCell key="cell" type="push" title="Browse" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hx1-5T-NOf">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -702,8 +700,8 @@
                                 </connections>
                             </button>
                             <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8GX-X8-1v4">
-                                <rect key="frame" x="20" y="228" width="583" height="22"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Project Directory" drawsBackground="YES" id="i2O-ro-lEA">
+                                <rect key="frame" x="20" y="228" width="570" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Project Directory (absolute path)" drawsBackground="YES" id="i2O-ro-lEA">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -720,7 +718,7 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <size key="minSize" width="649" height="144"/>
-                                            <size key="maxSize" width="649" height="10000000"/>
+                                            <size key="maxSize" width="651" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         </textView>
                                     </subviews>
@@ -736,8 +734,8 @@
                                 </scroller>
                             </scrollView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="p80-5P-rJ6">
-                                <rect key="frame" x="350" y="180" width="327" height="32"/>
-                                <buttonCell key="cell" type="push" title="Generate" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5F3-of-ZBM">
+                                <rect key="frame" x="353" y="180" width="158" height="32"/>
+                                <buttonCell key="cell" type="push" title="Generate Report" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5F3-of-ZBM">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -746,27 +744,40 @@
                                 </connections>
                             </button>
                             <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTD-GJ-fgH">
-                                <rect key="frame" x="20" y="186" width="316" height="22"/>
+                                <rect key="frame" x="20" y="186" width="319" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Author Name (eg. SteveJobs@apple.com)" drawsBackground="YES" id="KMt-c6-i5D">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LgK-Sg-yyV">
+                                <rect key="frame" x="519" y="180" width="158" height="32"/>
+                                <buttonCell key="cell" type="push" title="Copy Report" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZLj-SR-JYO">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="copyReport:" target="XfG-lQ-9wD" id="LLY-XW-ftX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="LgK-Sg-yyV" firstAttribute="centerY" secondItem="p80-5P-rJ6" secondAttribute="centerY" id="2EZ-Nd-pMF"/>
                             <constraint firstItem="p80-5P-rJ6" firstAttribute="leading" secondItem="aTD-GJ-fgH" secondAttribute="trailing" constant="20" id="3Pc-8Z-e1o"/>
                             <constraint firstAttribute="trailing" secondItem="bwa-ZV-xDg" secondAttribute="trailing" constant="20" id="3xU-XB-Gxj"/>
                             <constraint firstItem="bwa-ZV-xDg" firstAttribute="top" secondItem="aTD-GJ-fgH" secondAttribute="bottom" constant="20" id="5D3-9C-bhs"/>
                             <constraint firstItem="aTD-GJ-fgH" firstAttribute="top" secondItem="8GX-X8-1v4" secondAttribute="bottom" constant="20" id="81G-7b-xt5"/>
+                            <constraint firstItem="PD9-4W-O02" firstAttribute="width" secondItem="LgK-Sg-yyV" secondAttribute="width" multiplier="0.5" id="9B0-3w-bNF"/>
                             <constraint firstItem="PD9-4W-O02" firstAttribute="leading" secondItem="8GX-X8-1v4" secondAttribute="trailing" constant="8" id="CKN-R6-0Uf"/>
                             <constraint firstAttribute="bottom" secondItem="bwa-ZV-xDg" secondAttribute="bottom" constant="20" id="Ese-oN-teZ"/>
-                            <constraint firstAttribute="trailing" secondItem="p80-5P-rJ6" secondAttribute="trailing" constant="20" id="Phq-eV-9Y8"/>
+                            <constraint firstAttribute="trailing" secondItem="LgK-Sg-yyV" secondAttribute="trailing" constant="20" id="IcY-lV-5aP"/>
+                            <constraint firstItem="LgK-Sg-yyV" firstAttribute="leading" secondItem="p80-5P-rJ6" secondAttribute="trailing" constant="20" id="QLP-L9-ZsT"/>
+                            <constraint firstItem="LgK-Sg-yyV" firstAttribute="width" secondItem="p80-5P-rJ6" secondAttribute="width" id="Wsf-fE-d6u"/>
                             <constraint firstItem="aTD-GJ-fgH" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="ZbH-rd-0yS"/>
                             <constraint firstItem="bwa-ZV-xDg" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="aJw-yj-T2b"/>
                             <constraint firstItem="PD9-4W-O02" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="erm-kf-kEj"/>
                             <constraint firstAttribute="trailing" secondItem="PD9-4W-O02" secondAttribute="trailing" constant="20" id="fl0-Dy-3eN"/>
-                            <constraint firstItem="p80-5P-rJ6" firstAttribute="width" secondItem="aTD-GJ-fgH" secondAttribute="width" id="fpk-wU-LQV"/>
                             <constraint firstItem="p80-5P-rJ6" firstAttribute="centerY" secondItem="aTD-GJ-fgH" secondAttribute="centerY" id="s07-nj-NA4"/>
                             <constraint firstItem="8GX-X8-1v4" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="ukF-u0-gDQ"/>
                             <constraint firstItem="8GX-X8-1v4" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="y6G-uC-mUP"/>
@@ -780,7 +791,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="181" y="634"/>
+            <point key="canvasLocation" x="180.5" y="634"/>
         </scene>
     </scenes>
 </document>

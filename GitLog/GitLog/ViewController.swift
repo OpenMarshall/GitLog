@@ -40,7 +40,6 @@ class ViewController: NSViewController {
         }
     }
     
-    
     @IBAction func generate(_ sender: Any) {
         let output = cd(projDirField.stringValue).bash(command: "git",
                                                     arguments: ["log",
@@ -50,5 +49,15 @@ class ViewController: NSViewController {
                                                                 "--pretty=format:* %s"])
         consoleTextView.string = output
     }
+    
+    @IBAction func copyReport(_ sender: Any) {
+        guard let string = consoleTextView.string else {
+            return
+        }
+        let pasteboard = NSPasteboard.general()
+        pasteboard.declareTypes([NSPasteboardTypeString], owner: nil)
+        pasteboard.setString(string, forType: NSPasteboardTypeString)
+    }
+    
 }
 
