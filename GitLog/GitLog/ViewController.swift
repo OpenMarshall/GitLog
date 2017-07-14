@@ -42,10 +42,13 @@ class ViewController: NSViewController {
     
     
     @IBAction func generate(_ sender: Any) {
-        let log = cd(projDirField.stringValue)
-            .bash(command: "git",
-                  arguments: ["log","--since","'5 days ago'","--oneline","--author",authorNameField.stringValue])
-        consoleTextView.string = log
+        let output = cd(projDirField.stringValue).bash(command: "git",
+                                                    arguments: ["log",
+                                                                "--since='7 days ago'",
+                                                                "--oneline",
+                                                                "--author=\(authorNameField.stringValue)",
+                                                                "--pretty=format:* %s"])
+        consoleTextView.string = output
     }
 }
 
