@@ -16,7 +16,7 @@
 
 /* Begin PBXFileReference section */
 		5F2BE6331F190BCF006BEAF6 /* Shell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = "<group>"; };
-		5FADB1621F18C56E0043E20C /* GitLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FADB1621F18C56E0043E20C /* Weekly Report.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weekly Report.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FADB1651F18C56E0043E20C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FADB1671F18C56E0043E20C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5FADB1691F18C56E0043E20C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		5FADB1631F18C56E0043E20C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5FADB1621F18C56E0043E20C /* GitLog.app */,
+				5FADB1621F18C56E0043E20C /* Weekly Report.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,7 +81,7 @@
 			);
 			name = GitLog;
 			productName = GitLog;
-			productReference = 5FADB1621F18C56E0043E20C /* GitLog.app */;
+			productReference = 5FADB1621F18C56E0043E20C /* Weekly Report.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -258,7 +258,7 @@
 				INFOPLIST_FILE = GitLog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kyxu.GitLog;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Weekly Report";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
@@ -274,7 +274,7 @@
 				INFOPLIST_FILE = GitLog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kyxu.GitLog;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Weekly Report";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
