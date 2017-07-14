@@ -32,7 +32,7 @@ class ViewController: NSViewController {
         openPanel.allowsMultipleSelection = false
         openPanel.canChooseDirectories = true
         openPanel.canCreateDirectories = true
-        openPanel.canChooseFiles = true
+        openPanel.canChooseFiles = false
         openPanel.begin { (result) in
             if result == NSFileHandlingPanelOKButton, let path = openPanel.url?.path {
                 self.projDirField.stringValue = path
