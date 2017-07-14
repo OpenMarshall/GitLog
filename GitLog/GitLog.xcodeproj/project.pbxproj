@@ -295,6 +295,7 @@
 				5FADB1731F18C56E0043E20C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
