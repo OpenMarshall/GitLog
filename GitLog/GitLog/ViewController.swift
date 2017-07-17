@@ -25,6 +25,11 @@ class ViewController: NSViewController {
         }
     }
     
+    override func viewWillAppear() {
+        projDirField.stringValue = UserDefaults.standard.string(forKey: "ProjectDirectory") ?? ""
+        authorNameField.stringValue = UserDefaults.standard.string(forKey: "AuthorName") ?? ""
+    }
+    
     
     // MARK: - IBAction
     @IBAction func browseDir(_ sender: Any) {
@@ -44,6 +49,9 @@ class ViewController: NSViewController {
         let command = "git•log•--since='7 days ago'•--oneline•--author=\(authorNameField.stringValue)•--pretty=format:* %s"
         let output = cd(projDirField.stringValue).bash(command)
         consoleTextView.string = output
+        // save to local
+        UserDefaults.standard.set(projDirField.stringValue, forKey: "ProjectDirectory")
+        UserDefaults.standard.set(authorNameField.stringValue, forKey: "AuthorName")
     }
     
     @IBAction func copyReport(_ sender: Any) {
